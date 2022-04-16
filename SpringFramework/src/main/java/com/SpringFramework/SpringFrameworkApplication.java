@@ -1,13 +1,14 @@
 package com.SpringFramework;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-@SpringBootApplication
 public class SpringFrameworkApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringFrameworkApplication.class, args);
+
+		ApplicationContext contex = new ClassPathXmlApplicationContext("beans.xml");
+
 	}
 
 }
