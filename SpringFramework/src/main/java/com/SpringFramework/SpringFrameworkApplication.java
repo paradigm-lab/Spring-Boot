@@ -7,12 +7,11 @@ public class SpringFrameworkApplication {
 
 	public static void main(String[] args) {
 
-		ApplicationContext contex = new ClassPathXmlApplicationContext("beans.xml");
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		System.out.println("Beans file is loaded");
 
-		Doctor staff = contex.getBean(Doctor.class);
-		staff.assist();
-		System.out.println(staff.getQualification());
+		Doctor doctor = context.getBean("doctor", Doctor.class);
+		doctor.assist();
 	}
 
 }
