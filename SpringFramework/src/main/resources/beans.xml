@@ -10,6 +10,6 @@
 
 
     <bean id="doctor" class="com.SpringFramework.Doctor" />
-
+    <bean id="nurse" class="com.SpringFramework.Nurse" />
 
 </beans>
