@@ -9,7 +9,7 @@
   http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-
+    <bean id="doctor" class="com.SpringFramework.Doctor" />
 
 
 </beans>
