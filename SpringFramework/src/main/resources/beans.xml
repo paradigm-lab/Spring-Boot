@@ -9,7 +9,11 @@
   http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <bean id="doctor" class="com.SpringFramework.Doctor" />
+    <bean id="doctor" class="com.SpringFramework.Doctor">
+           <property name="qualification"  value="POST" />
+           <property name="nurse" ref="nurse" />
+    </bean>
+
     <bean id="nurse" class="com.SpringFramework.Nurse" />
 
 </beans>
