@@ -16,6 +16,7 @@ dependencies {
 
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'javax.annotation:javax.annotation-api'
 	testImplementation 'com.h2database:h2'
 
 	// Testing
