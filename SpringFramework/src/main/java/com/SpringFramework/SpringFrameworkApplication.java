@@ -10,8 +10,8 @@ public class SpringFrameworkApplication {
 		ApplicationContext contex = new ClassPathXmlApplicationContext("beans.xml");
 		System.out.println("Beans file is loaded");
 
-		Doctor doctor = (Doctor) contex.getBean("doctor");
-		doctor.assist();
+		Staff staff = contex.getBean(Nurse.class);
+		staff.assist();
 	}
 
 }
