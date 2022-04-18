@@ -11,7 +11,7 @@ public class SpringFrameworkApplication {
 		System.out.println("The Beans Configuration file is loaded");
 
 		ShoppingCart shoppingCart = (ShoppingCart) context.getBean("shoppingcart");
-		shoppingCart.checkout();
+		shoppingCart.checkout("CANCELLED");
 
 	}
 
