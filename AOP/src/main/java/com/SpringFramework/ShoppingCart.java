@@ -12,4 +12,9 @@ public class ShoppingCart {
         // Sanitize the Data (Sanitization)
         System.out.println("Checkout Method from ShoppingCart Called");
     }
+
+    public int quantity() {
+        return 2;
+    }
+
 }
