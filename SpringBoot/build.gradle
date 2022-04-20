@@ -16,7 +16,8 @@ dependencies {
 
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-devtools:2.6.6'
+	implementation 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.springframework.data:spring-data-jpa'
 	testImplementation 'com.h2database:h2'
 
 	// Testing
