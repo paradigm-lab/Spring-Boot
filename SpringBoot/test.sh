@@ -30,5 +30,5 @@ function testPutStudent {
 
 #testPutStudent
 #testDeleteStudent
-testAddStudent
-#testGetStudents
+#testAddStudent
+testGetStudents
