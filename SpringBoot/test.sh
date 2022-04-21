@@ -26,13 +26,22 @@ function testDeleteStudent {
 }
 
 function testPutStudent {
-  curl -X PUT -H "Content-Type: application/json" -d "$BDDY" http://localhost:8082/departments/1
+BODY=$(cat <<EOF
+{
+  "departmentName": "Physics",
+  "departmentAddress": "Dar es Salaam",
+  "departmentCode": "P-123"
+}
+EOF
+)
+  curl -X PUT -H "Content-Type: application/json" -d "$BODY" http://localhost:8082/departments/1
 }
 
 ###################################################################
 
+testAddStudent
 testPutStudent
 #testDeleteStudent
 #testAddStudent
-#testGetStudents
+testGetStudents
 #testGetStudentsById
