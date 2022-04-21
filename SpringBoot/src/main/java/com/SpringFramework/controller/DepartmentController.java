@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class DepartmentController {
 
@@ -19,5 +21,11 @@ public class DepartmentController {
     public Department saveDepartment(@RequestBody Department department) {
 
         return departmentService.saveDepartment(department);
+    }
+
+    @RequestMapping(value = "/departments", method = RequestMethod.GET)
+    public List<Department> fetchDepartmentList() {
+
+        return departmentService.fetchDepartmentList();
     }
 }
