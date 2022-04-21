@@ -26,13 +26,13 @@ function testDeleteStudent {
 }
 
 function testPutStudent {
-  curl -X PUT http://localhost:8080/api/v1/student/5 -d name=Maria&email=maria@gmail.com
+  curl -X PUT -H "Content-Type: application/json" -d "$BDDY" http://localhost:8082/departments/1
 }
 
 ###################################################################
 
-#testPutStudent
-testDeleteStudent
+testPutStudent
+#testDeleteStudent
 #testAddStudent
 #testGetStudents
 #testGetStudentsById
