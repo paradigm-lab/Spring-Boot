@@ -22,7 +22,7 @@ function testGetStudentsById {
 }
 
 function testDeleteStudent {
-  curl -X DELETE http://localhost:8080/api/v1/student/1
+  curl -X DELETE http://localhost:8082/departments/1
 }
 
 function testPutStudent {
@@ -32,7 +32,7 @@ function testPutStudent {
 ###################################################################
 
 #testPutStudent
-#testDeleteStudent
+testDeleteStudent
 #testAddStudent
 #testGetStudents
-testGetStudentsById
+#testGetStudentsById
