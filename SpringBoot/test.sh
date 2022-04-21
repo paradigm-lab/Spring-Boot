@@ -14,7 +14,7 @@ EOF
 
 # | jq
 function testGetStudents {
-  curl -X GET http://localhost:8080/api/v1/student | jq
+  curl -X GET http://localhost:8082/departments | jq
 }
 
 
