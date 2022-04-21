@@ -17,6 +17,9 @@ function testGetStudents {
   curl -X GET http://localhost:8082/departments | jq
 }
 
+function testGetStudentsById {
+  curl -X GET http://localhost:8082/departments/1 | jq
+}
 
 function testDeleteStudent {
   curl -X DELETE http://localhost:8080/api/v1/student/1
@@ -31,4 +34,5 @@ function testPutStudent {
 #testPutStudent
 #testDeleteStudent
 #testAddStudent
-testGetStudents
+#testGetStudents
+testGetStudentsById
