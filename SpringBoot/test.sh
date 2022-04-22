@@ -22,7 +22,7 @@ function testGetStudentsById {
 }
 
 function testGetStudentsByName {
-  curl -X GET http://localhost:8082/departments/name/ComputerEngineering | jq
+  curl -X GET http://localhost:8082/departments/name/computerengineering | jq
 }
 
 function testDeleteStudent {
