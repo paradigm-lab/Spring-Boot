@@ -3,7 +3,7 @@
 function testAddStudent {
   BODY=$(cat <<EOF
 {
-  "departmentName": "Compute Engineering",
+  "departmentName": "ComputerEngineering",
   "departmentAddress": "Tz",
   "departmentCode": "CE-0"
 }
@@ -19,6 +19,10 @@ function testGetStudents {
 
 function testGetStudentsById {
   curl -X GET http://localhost:8082/departments/1 | jq
+}
+
+function testGetStudentsByName {
+  curl -X GET http://localhost:8082/departments/name/ComputerEngineering | jq
 }
 
 function testDeleteStudent {
@@ -40,8 +44,9 @@ EOF
 ###################################################################
 
 testAddStudent
-testPutStudent
+testGetStudentsByName
+#testPutStudent
 #testDeleteStudent
 #testAddStudent
-testGetStudents
+#testGetStudents
 #testGetStudentsById
