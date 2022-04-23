@@ -3,6 +3,8 @@ package com.SpringFramework.controller;
 import com.SpringFramework.entity.Department;
 import com.SpringFramework.service.DepartmentService;
 import com.SpringFramework.service.DepartmentServiceImpl;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,15 +17,17 @@ public class DepartmentController {
     @Autowired
     private DepartmentServiceImpl departmentService;
 
+    private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
+
     @RequestMapping(value = "/departments", method = RequestMethod.POST)
     public Department saveDepartment(@Valid @RequestBody Department department) {
-
+        LOGGER.info("Inside SaveDepartment of DepartmentController");
         return departmentService.saveDepartment(department);
     }
 
     @RequestMapping(value = "/departments", method = RequestMethod.GET)
     public List<Department> fetchDepartmentList() {
-
+        LOGGER.info("Inside fetchDepartmentList of DepartmentController");
         return departmentService.fetchDepartmentList();
     }
 
