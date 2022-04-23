@@ -43,10 +43,10 @@ EOF
 
 ###################################################################
 
-testAddStudent
+#testAddStudent
 #testGetStudentsByName
 #testPutStudent
 #testDeleteStudent
 #testAddStudent
-testGetStudents
-#testGetStudentsById
+#testGetStudents
+testGetStudentsById
