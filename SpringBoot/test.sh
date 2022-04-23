@@ -44,9 +44,9 @@ EOF
 ###################################################################
 
 testAddStudent
-testGetStudentsByName
+#testGetStudentsByName
 #testPutStudent
 #testDeleteStudent
 #testAddStudent
-#testGetStudents
+testGetStudents
 #testGetStudentsById
