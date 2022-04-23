@@ -3,7 +3,7 @@
 function testAddStudent {
   BODY=$(cat <<EOF
 {
-  "departmentName": "ComputerEngineering",
+  #"departmentName": "ComputerEngineering",
   "departmentAddress": "Tz",
   "departmentCode": "CE-0"
 }
