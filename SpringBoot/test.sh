@@ -1,12 +1,12 @@
 #!/bin/zsh
 
 function testAddStudent {
-  BODY=$(cat <<EOF
-{
-  "departmentName": "ComputerEngineering",
-  "departmentAddress": "Tz",
-  "departmentCode": "CE-0"
-}
+BODY=$(cat <<EOF
+  {
+    "departmentName": "Software Engineering",
+    "departmentAddress": "Tz",
+    "departmentCode": "CE-05"
+  }
 EOF
 )
   curl -X POST -H "Content-Type: application/json" -d "$BODY" http://localhost:8082/departments
@@ -43,10 +43,10 @@ EOF
 
 ###################################################################
 
-#testAddStudent
+testAddStudent
 #testGetStudentsByName
 #testPutStudent
 #testDeleteStudent
 #testAddStudent
 #testGetStudents
-testGetStudentsById
+#testGetStudentsById
