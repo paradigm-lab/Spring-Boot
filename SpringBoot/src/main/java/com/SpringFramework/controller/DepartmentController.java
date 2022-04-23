@@ -1,6 +1,7 @@
 package com.SpringFramework.controller;
 
 import com.SpringFramework.entity.Department;
+import com.SpringFramework.error.DepartmentNotFoundException;
 import com.SpringFramework.service.DepartmentService;
 import com.SpringFramework.service.DepartmentServiceImpl;
 import org.slf4j.Logger;
@@ -32,7 +33,7 @@ public class DepartmentController {
     }
 
     @RequestMapping(value = "/departments/{id}", method = RequestMethod.GET)
-    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException {
 
         return departmentService.fetchDepartmentById(departmentId);
     }
