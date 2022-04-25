@@ -3,6 +3,7 @@ package com.SpringFramework.service;
 import com.SpringFramework.entity.Department;
 import com.SpringFramework.repository.DepartmentRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -36,6 +37,7 @@ class DepartmentServiceTest {
 
     @Test
     @DisplayName("Get Data based on Valid Department Name")
+    @Disabled
     public void whenValidDepartmentName_thenDepartmentShouldFound() {
         String departmentName = "IT";
         Department found = departmentService.fetchDepartmentByName(departmentName);
