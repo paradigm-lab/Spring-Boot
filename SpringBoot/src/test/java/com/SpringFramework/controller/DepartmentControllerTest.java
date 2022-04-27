@@ -49,14 +49,14 @@ class DepartmentControllerTest {
         Mockito.when(departmentService.saveDepartment(inputDepartment))
                 .thenReturn(department);
 
-        mockMvc.perform(post("/departments")
+        mockMvc.perform(MockMvcRequestBuilders.post("/departments")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\n" +
                                 "\t\"departmentName\":\"IT\",\n" +
                                 "\t\"departmentAddress\":\"IAA\",\n" +
                                 "\t\"departmentCode\":\"IT-06\",\n" +
                                 "}"))
-                .andExpect(status().isOk());
+                .andExpect(MockMvcResultMatchers.status().isOk());
     }
 
     @Test
