@@ -1,7 +1,6 @@
 package com.SpringFramework.controller;
 
 import com.SpringFramework.entity.Department;
-import com.SpringFramework.error.DepartmentNotFoundException;
 import com.SpringFramework.service.DepartmentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,9 +13,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(DepartmentController.class)
 class DepartmentControllerTest {
@@ -55,7 +54,7 @@ class DepartmentControllerTest {
                         .content("{\n" +
                                 "\t\"departmentName\":\"IT\",\n" +
                                 "\t\"departmentAddress\":\"IAA\",\n" +
-                                "\t\"departmentCode\":\"IT-06\",\n" +
+                                "\t\"departmentCode\":\"IT-06\"\n" +
                                 "}"))
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
