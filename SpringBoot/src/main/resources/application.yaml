@@ -35,6 +35,12 @@ spring:
 welcome:
   message: Welcome to kwawingu
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 ---
 spring:
   profiles: prod
