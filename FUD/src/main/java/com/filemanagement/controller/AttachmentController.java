@@ -3,10 +3,10 @@ package com.filemanagement.controller;
 import com.filemanagement.entity.Attachment;
 import com.filemanagement.model.ResponseData;
 import com.filemanagement.service.AttachmentService;
+import org.springframework.core.io.Resource;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -31,4 +31,12 @@ public class AttachmentController {
         return new ResponseData(attachment.getFileName(), downloadURL, file.getContentType(), file.getSize());
 
     }
+
+    @GetMapping("/download/{fileId}")
+    public ResponseEntity<Resource> downloadFile(@PathVariable String fileId) {
+        Attachment attachment = null;
+        attachment = attachmentService.getAttachment(fileId);
+    }
+
+
 }
