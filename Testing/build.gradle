@@ -16,7 +16,7 @@ dependencies {
 
 	// Spring boot Stater web dependency
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	// runtimeOnly 'org.springframework.boot:spring-boot-devtools'
 
 	// Data Jpa
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -24,7 +24,7 @@ dependencies {
 	// Spring boot Validation
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 
-	testRuntimeOnly "com.h2database:h2"
+	runtimeOnly "com.h2database:h2"
 
 	// Lombok
 	compileOnly 'org.projectlombok:lombok:1.18.24'

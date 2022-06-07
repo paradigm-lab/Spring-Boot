@@ -87,7 +87,7 @@ class StudentServiceTest {
         // Then
         assertThatThrownBy(() -> underTest.addStudent(student))
                 .isInstanceOf(BadRequestException.class)
-                .hasMessageContaining("Email " + student.getEmail() + "taken");
+                .hasMessageContaining("Email " + student.getEmail() + " taken");
 
         verify(studentRepository, never()).save(any());
     }

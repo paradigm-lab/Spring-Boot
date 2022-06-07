@@ -1,8 +1,8 @@
 server:
   port: 8080
-  error:
-    include-binding-errors: always
-    include-message: always
+    error:
+      include-binding-errors: always
+      include-message: always
 
 spring:
   profiles:

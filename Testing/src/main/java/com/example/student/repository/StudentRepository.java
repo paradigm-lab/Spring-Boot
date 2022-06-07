@@ -14,4 +14,8 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
             "WHERE s.email = ?1"
     )
     Boolean selectExistsEmail(String email);
+
+    default void abc() {
+        System.out.println("This is a default method.");
+    }
 }
