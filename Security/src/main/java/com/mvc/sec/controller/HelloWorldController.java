@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloWorldController {
@@ -16,4 +17,17 @@ public class HelloWorldController {
         return "hello-world";
     }
 
+    @ResponseBody
+    @RequestMapping(value = "/helloWorld", method = RequestMethod.GET)
+    public String hello() {
+
+        return "Hello Spring Security";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/bye", method = RequestMethod.GET)
+    public String bye() {
+
+        return "bye bye guys !!";
+    }
 }
