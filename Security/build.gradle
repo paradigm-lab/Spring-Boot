@@ -5,8 +5,9 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group = 'org.example'
+version = '0.0.1'
+sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
@@ -17,9 +18,8 @@ dependencies {
 
     // Dependency
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework:spring-webmvc:5.3.19'
-    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'
-    // implementation 'javax.servlet.jsp.jstl:jstl:1.2'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 
     // Spring Security
     /*
@@ -34,6 +34,6 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
-test {
+tasks.named('test') {
     useJUnitPlatform()
 }
