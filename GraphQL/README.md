@@ -15,3 +15,6 @@ Graphql is a Specification meaning that software requirements specification(SRS)
     * Schema First then the code to wire it to the schema
     * Code First add annotation then generate the schema
 
+### Graphql Query Language 
+    * Query (Read only)
+
