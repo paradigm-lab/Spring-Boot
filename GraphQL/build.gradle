@@ -14,11 +14,12 @@ repositories {
 }
 
 dependencies {
-    // Dependency
+    // Spring boot Dependencies
     implementation 'org.springframework.boot:spring-boot-starter-web:2.7.0'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.0'
     implementation 'org.springframework.boot:spring-boot-devtools:2.7.0'
 
+    // H2 database
     runtimeOnly 'com.h2database:h2:'
 
     // Lombok
