@@ -6,3 +6,7 @@ Graphql is a Specification meaning that software requirements specification(SRS)
 GraphQL parts:
 	* Schema Definition Language (Schema is MANDATORY)
 	* Query Language
+
+Dependencies:
+	graphql-java - Implementation of GraphQL in java language (Core Engineer)
+	graphql-java-kickstart - Exposes the Engineer to get started with GraphQL.
