@@ -36,7 +36,7 @@ dependencies {
     // End
 
     implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:12.0.0'
-    implementation 'com.graphql-java:graphiql-spring-boot-starter:5.0.2' // DEV only
+    implementation 'com.graphql-java:graphiql-spring-boot-starter:5.0.2' // DEV only (It should be removed in production)
 
 
     // Testing
