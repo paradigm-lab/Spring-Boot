@@ -30,19 +30,13 @@ public class DiveIntoGraphqlInJava {
     }
 
     @Bean
-	public ServletRegistrationBean graphQLServlet() {
-		return new ServletRegistrationBean(SimpleGraphQLHttpServlet
-                .newBuilder(buildSchema(speakerService, attendeeService, talkService))
-                .build(),"/graphql");
-	}
-
-    private static GraphQLSchema buildSchema(SpeakerService speakerService, AttendeeService attendeeService, TalkService talkService) {
-		return SchemaParser
-				.newParser()
-     			.file("graphql/schema.graphqls")
+	public GraphQLSchema schema() {
+        return SchemaParser
+            .newParser()
+            .file("graphql/schema.graphqls")
 //              .dictionary()
-                .resolvers(new Query(talkService))    // Adds all the resolver mapping from the schema to our code
-				.build()
-				.makeExecutableSchema();
+            .resolvers(new Query(talkService))    // Adds all the resolver mapping from the schema to our code
+            .build()
+            .makeExecutableSchema();
 	}
 }
