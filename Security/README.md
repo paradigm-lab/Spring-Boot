@@ -29,6 +29,11 @@ Note:
 
 AuthenticationManagerBuilder - Will help me to create user
 AuthenticationProvider
-PasswordEncoder 
+
+PasswordEncoder(Interface):
     NoOpPasswordEncoder
     BCryptPasswordEncoder
+    ScryptPasswordEncoder
+
+
+
