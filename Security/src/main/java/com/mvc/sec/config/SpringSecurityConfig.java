@@ -25,13 +25,15 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
         auth
             .inMemoryAuthentication() // Look for my users inside server memory
             .withUser("john")
-            .password("john123") // Storing the password here in plain-text
+            .password("{noop}john123") // Storing the password here in plain-text (Using the password encoder id in the password)
             .roles("admin");
     }
 
+    /*
     @Bean
     PasswordEncoder getPasswordEncoder() {
         return NoOpPasswordEncoder.getInstance();
     }
+     */
 
 }
