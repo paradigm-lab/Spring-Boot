@@ -30,3 +30,5 @@ Note:
 AuthenticationManagerBuilder - Will help me to create user
 AuthenticationProvider
 PasswordEncoder 
+    NoOpPasswordEncoder
+    BCryptPasswordEncoder
