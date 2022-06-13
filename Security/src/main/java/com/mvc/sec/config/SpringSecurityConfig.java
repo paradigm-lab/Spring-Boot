@@ -1,9 +1,12 @@
 package com.mvc.sec.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 
 @EnableWebSecurity(debug = true) // This annotation will go to create the Spring filter chain
@@ -25,4 +28,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
             .password("john123") // Storing the password here in plain-text
             .roles("admin");
     }
+
+    @Bean
+    PasswordEncoder getPasswordEncoder() {
+        return NoOpPasswordEncoder.getInstance();
+    }
+
 }
