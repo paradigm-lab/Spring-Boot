@@ -23,3 +23,10 @@ A View is responsible for rendering the HTML content
     Servlet Filter
 
 - Secure URLS endpoints
+
+Note: 
+    Server memory is called in-memory 
+
+AuthenticationManagerBuilder - Will help me to create user
+AuthenticationProvider
+PasswordEncoder 
