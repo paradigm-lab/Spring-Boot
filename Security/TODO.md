@@ -19,3 +19,7 @@
     Prove by clicking to the cookie and delete the cookie again and send the request to the server.
 
 
+## Question:
+    What is the difference between authenticated() and permitall()
+
+
