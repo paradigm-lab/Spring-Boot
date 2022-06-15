@@ -22,18 +22,48 @@ A View is responsible for rendering the HTML content
     First Initializer then Filter chain.
     Servlet Filter
 
-- Secure URLS endpoints
-
-Note: 
+## Note: 
     Server memory is called in-memory 
+    Secure URLs endpoints
 
-AuthenticationManagerBuilder - Will help me to create user
-AuthenticationProvider
+## WebSecurityConfigurerAdapter Class
+    * AuthenticationManagerBuilder
+        * Used to set up our user inside the in-memory
 
-PasswordEncoder(Interface):
+    * configure(HttpSecurity)
+        * Any request coming to the server, Authenticate the http request using a login
+        * Authorize(Give access to the http request)
+        * Show the login form to user for authentication (Form based Authentication)    
+        * User can also login using basic authentication (Basic Authentication)
+
+    * AuthenticationProvider 
+    
+    Note:
+        Configure method form this class is available here by default
+
+## PasswordEncoder(Interface):
     NoOpPasswordEncoder
     BCryptPasswordEncoder
     ScryptPasswordEncoder
+
+
+## Security Filter chain:
+    * WebAsyncManagerIntegrationFilter
+    * SecurityContextPersistenceFilter
+    * HeaderWriterFilter
+    * CsrfFilter
+    * LogoutFilter
+    * UsernamePasswordAuthencticationFilter (Form Based Login)
+    * DefaultLoginPageGeneratingFilter
+    * DefaultLogoutPageGeneratingFilter
+    * BasicAuthenticationFilter (Basic Authenction Filter from the REST Client)
+    * RequestCacheAwareFilter
+    * SecurityContextHolderAwareRequestFilter
+    * AnonymousAuthenticationFilter
+    * SessionManagementFilter
+    * ExceptionTranslationFilter
+    * FilterSecurityInterceptor
+    
 
 
 
