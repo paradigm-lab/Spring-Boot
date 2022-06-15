@@ -42,7 +42,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
         http
                 .authorizeRequests()
                 .anyRequest()
-                .authenticated()
+                // .authenticated()
+                .denyAll()       // Deny all the request even if they are registered and even if they have a valid username and password
+                .and()
+                .formLogin()    // UsernamePasswordAuthenticationFilter
                 .and()
                 .httpBasic();   // Basic Authentication the encoded password can be decoded (Base64)
     }
