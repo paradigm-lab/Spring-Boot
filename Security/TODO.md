@@ -13,3 +13,9 @@
   * During logout we invalidate the current session remove everything from the existing session
   
 
+## Note:
+    When we use REST Client and we remove Authentication we can still send the request to the server.
+    Because a cokkie created and authenticated during the 1st request. 
+    Prove by clicking to the cookie and delete the cookie again and send the request to the server.
+
+
