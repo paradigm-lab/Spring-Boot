@@ -41,9 +41,19 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .anyRequest()
-                .authenticated()    // Now every URLS are secured and needs to be authenticated
+                // .anyRequest()
+                /*
+                 * Only show the login form for /hello request
+                 * and serve the request once user is logged in,
+                 * for other requests login is not required
+                 */
+                .antMatchers("/hello")
+                .authenticated()    // Now every URLS are secured and needs to be authenticated (Show the login form)
                 // .denyAll()       // Deny all the request even if they are registered and even if they have a valid username and password
+                /*
+                    There are better options available to handle the applications' downtime
+                    Interceptors
+                 */
                 // .permitAll()        // NO login required permitting all the request
                 .and()
                 .formLogin()    // UsernamePasswordAuthenticationFilter
