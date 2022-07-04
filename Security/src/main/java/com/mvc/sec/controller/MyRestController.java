@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.*;
 public class MyRestController {
 
     @RequestMapping(value = "/greet/{yourName}", method = RequestMethod.GET)
-    public String greet(@PathVariable("yourName") String yourName) {
+    public String greet(@PathVariable("yourName") String name) {
 
-        return "Good Evening " + yourName;
+        return "Good Evening " + name;
     }
 }
