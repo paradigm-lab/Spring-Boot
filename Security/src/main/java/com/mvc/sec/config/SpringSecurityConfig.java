@@ -27,7 +27,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
             .inMemoryAuthentication() // Look for my users inside server memory
             .withUser("john")
             .password("{noop}john123") // Storing the password here in plain-text (Using the password encoder id in the password)
-            .roles("admin");
+            .roles("admin")
+            .and()
+            .withUser("collin")
+            .password("{bcrypt}$2a$10$efpWtpXuMXhu1G5tltIzI.5I.tHXvvV9CpUHacAtl4KSgw4HIvxEu") // password123
+            .roles("user");
     }
 
     /*
