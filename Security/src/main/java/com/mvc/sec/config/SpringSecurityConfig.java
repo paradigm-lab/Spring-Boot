@@ -60,6 +60,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
 
                 .antMatchers("/helloWorld")
                 .permitAll()
+
+                .antMatchers("/myCustomLogin")
+                .permitAll()
                 // .denyAll()       // Deny all the request even if they are registered and even if they have a valid username and password
                 /*
                     There are better options available to handle the applications' downtime
