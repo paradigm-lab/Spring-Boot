@@ -72,7 +72,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
                 .loginPage("/myCustomLogin") // Don't use the default login page (/login), use the one we have created
                 .loginProcessingUrl("/process-login")
                 .and()          // Close
-                .httpBasic();   // Basic Authentication the encoded password can be decoded (Base64)
+                .httpBasic()   // Basic Authentication the encoded password can be decoded (Base64)
+                .and()
+                .logout()
+                .logoutUrl("/appLogout");
     }
 
 }
