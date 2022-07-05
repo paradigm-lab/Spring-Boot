@@ -5,8 +5,18 @@
     <meta http-equiv="Content-Type" content = "text/html; charset=UTF-8">
 </head>
 <body>
+
+<p th:if="${param.error}" style="color: red;">
+    Bad Credentials
+</p>
+
+<p th:if="${param.logout}" style="color: red;">
+    You are successfully logged out ! sign in again
+</p>
+
 <center><h1>My custom login page</h1></center>
-    <center>
+
+<center>
         <form th:action="@{/process-login}" method="post">
 
             <label for="username">Username</label>:
@@ -21,7 +31,7 @@
             <input type="password" placeholder="Password" name="password" autofocus="autofocus" /> <br/>
 
             <!-- When we post the data(during login submit) spring will handle it for you -->
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" />
         </form>
     </center>
 </body>
