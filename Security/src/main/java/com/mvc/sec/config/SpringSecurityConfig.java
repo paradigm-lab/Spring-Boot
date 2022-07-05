@@ -47,17 +47,24 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
                  * and serve the request once user is logged in,
                  * for other requests login is not required
                  */
-                .antMatchers("/hello")
+
+                .antMatchers("/hello")  // Show the login page
                 .authenticated()    // Now every URLS are secured and needs to be authenticated (Show the login form)
+
+                .antMatchers("/bye")
+                .authenticated()
+
+                .antMatchers("/helloWorld")
+                .permitAll()
                 // .denyAll()       // Deny all the request even if they are registered and even if they have a valid username and password
                 /*
                     There are better options available to handle the applications' downtime
                     Interceptors
                  */
                 // .permitAll()        // NO login required permitting all the request
-                .and()
+                .and()          // Close
                 .formLogin()    // UsernamePasswordAuthenticationFilter
-                .and()
+                .and()          // Close
                 .httpBasic();   // Basic Authentication the encoded password can be decoded (Base64)
     }
 

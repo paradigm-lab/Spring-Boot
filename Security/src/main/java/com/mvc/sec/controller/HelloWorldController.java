@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloWorldController {
 
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)  // Secure it
     public String helloWorld(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
         model.addAttribute("name", name);
 
@@ -18,14 +18,14 @@ public class HelloWorldController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/helloWorld", method = RequestMethod.GET)
+    @RequestMapping(value = "/helloWorld", method = RequestMethod.GET)  // Don't secure this
     public String hello() {
 
         return "Hello Spring Security";
     }
 
     @ResponseBody
-    @RequestMapping(value = "/bye", method = RequestMethod.GET)
+    @RequestMapping(value = "/bye", method = RequestMethod.GET) // secure it
     public String bye() {
 
         return "bye bye guys !!";
