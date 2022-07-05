@@ -7,11 +7,20 @@
 <body>
 <center><h1>My custom login page</h1></center>
     <center>
-        <form>
-            Username : <input type="text" placeholder="User Name" name="username">
-            <br/><br/>
-            Password : <input type="text" placeholder="Password" name="password">
-            <br/><br/>
+        <form th:action="@{/process-login}" method="post">
+
+            <label for="username">Username</label>:
+
+            <!--
+                name: attribute
+                    If we won't use the spring form tags and the default parameter name spring won't generate the
+                    CSRF token for us, and we have to generate it by ourselves.
+             -->
+            <input type="text" placeholder="User Name" name="username" autofocus="autofocus" />  <br/>
+            <label for="password">Password</label>:
+            <input type="password" placeholder="Password" name="password" autofocus="autofocus" /> <br/>
+
+            <!-- When we post the data(during login submit) spring will handle it for you -->
             <input type="submit" value="Login">
         </form>
     </center>
