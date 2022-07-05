@@ -61,8 +61,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
                 .antMatchers("/helloWorld")
                 .permitAll()
 
-                .antMatchers("/myCustomLogin")
-                .permitAll()
                 // .denyAll()       // Deny all the request even if they are registered and even if they have a valid username and password
                 /*
                     There are better options available to handle the applications' downtime
@@ -71,6 +69,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
                 // .permitAll()        // NO login required permitting all the request
                 .and()          // Close
                 .formLogin()    // UsernamePasswordAuthenticationFilter
+                .loginPage("/myCustomLogin") // Don't use the default login page (/login), use the one we have created
+                .loginProcessingUrl("/process-login")
                 .and()          // Close
                 .httpBasic();   // Basic Authentication the encoded password can be decoded (Base64)
     }
