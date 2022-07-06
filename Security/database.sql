@@ -1,6 +1,5 @@
 -- Note: The Database name should be in small case letter.
 
-/*
 CREATE DATABASE springsec;
 
 CREATE USER security WITH ENCRYPTED PASSWORD 'security';
@@ -17,7 +16,6 @@ CREATE TABLE users (
 	password VARCHAR(50) NOT NULL,
 	enabled BOOLEAN NOT NULL
 );
-*/
 
 -- This table will store the roles/authories
 CREATE TABLE authorities (
