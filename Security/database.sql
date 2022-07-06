@@ -10,3 +10,9 @@ GRANT ALL PRIVILEGES ON DATABASE springsec TO security;
 
 psql -h 127.0.0.1 -d springsec -U security --password
 
+
+CREATE TABLE users (
+	username VARCHAR(50) NOT NULL PRIMARY KEY,
+	password VARCHAR(50) NOT NULL,
+	enabled BOOLEAN NOT NULL
+);
