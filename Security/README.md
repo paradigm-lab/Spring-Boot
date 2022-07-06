@@ -65,5 +65,8 @@ A View is responsible for rendering the HTML content
     * FilterSecurityInterceptor
     
 
+## CSRF (Cross-Site Request Forgery)
+        
+
 
 
