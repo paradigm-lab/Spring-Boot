@@ -23,6 +23,12 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+        // Load the user login credentials from Database(DB)
+        // Username, Password, Role
+
+
+        /*
         auth
             .inMemoryAuthentication() // Look for my users inside server memory
             .withUser("john")
@@ -32,6 +38,7 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter { // Help
             .withUser("collin")
             .password("{bcrypt}$2a$10$efpWtpXuMXhu1G5tltIzI.5I.tHXvvV9CpUHacAtl4KSgw4HIvxEu") // password123
             .roles("user");
+         */
     }
 
     /*
